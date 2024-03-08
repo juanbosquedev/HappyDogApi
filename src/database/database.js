@@ -4,15 +4,8 @@ const UserFunction = require("../models/Users");
 const PurchaseFunction = require("../models/Purchases");
 
 const { DB_USER, DB_HOST, POSTGRESQL_URL } = process.env;
-
-const sequelize = new Sequelize(`${POSTGRESQL_URL}`, {
-  dialect: `${DB_USER}`,
-  host: `${DB_HOST}`,
-  dialectOptions: {
-    ssl: true,
-  },
-  logging: false,
-});
+// const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname')
+const sequelize = new Sequelize(`${POSTGRESQL_URL}`)
 UserFunction(sequelize);
 PurchaseFunction(sequelize);
 const { Users, Purchases } = sequelize.models;
