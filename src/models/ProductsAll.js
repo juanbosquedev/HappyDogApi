@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
-const { conn } = require("../database/database.js");
 
 
-const ProductsAll = conn.define(
+const ProductsAll = (sequelize) => {
+  sequelize.define(
   "productsAll",
   {
     id: {
@@ -32,6 +32,7 @@ const ProductsAll = conn.define(
   {
     timestamps: false,
   }
-);
+  );
+};
 
 module.exports = ProductsAll;
