@@ -1,8 +1,9 @@
-const { DataTypes } = require("sequelize");
+const { Sequelize, DataTypes } = require("sequelize");
+require("dotenv").config();
+const { POSTGRESQL_URL } = process.env;
+const sequelize = new Sequelize(`${POSTGRESQL_URL}`);
 
-
-const ProductsAll = (sequelize) => {
-  sequelize.define(
+const ProductsAll = sequelize.define(
   "productsAll",
   {
     id: {
@@ -32,7 +33,6 @@ const ProductsAll = (sequelize) => {
   {
     timestamps: false,
   }
-  );
-};
+);
 
 module.exports = ProductsAll;
