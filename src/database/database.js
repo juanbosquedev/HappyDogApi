@@ -1,10 +1,10 @@
 require("dotenv").config();
 const { DB_USER, DB_HOST, POSTGRESQL_URL } = process.env;
 const { Sequelize } = require("sequelize");
-
+const pg = require("pg");
 
 const sequelize = new Sequelize(`${POSTGRESQL_URL}`, {
-  dialect: `${DB_USER}`,
+  dialect: pg,
   host: `${DB_HOST}`,
   dialectOptions: {
     ssl: true,
@@ -13,7 +13,6 @@ const sequelize = new Sequelize(`${POSTGRESQL_URL}`, {
 });
 
 const { Users, Purchases } = sequelize.models;
-
 
 module.exports = {
   conn: sequelize,
