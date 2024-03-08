@@ -19,7 +19,7 @@ server.use(require("./routes/index"));
 server.use("*", (req, res)=>{
   res.status(404).send("Not Found")
 });
-server.get("/productsAll", (req, res)=>{
+server.get("/productsAlll", (req, res)=>{
   res.status(200).send("hola")
 });
 server.use((err, req, res, next) => {
