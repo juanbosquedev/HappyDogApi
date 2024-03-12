@@ -1,5 +1,4 @@
-module.exports={
-    Login:require('./Login'),
-    Register:require('./Register'),
-
-}
+module.exports = {
+  Login: require("./Login"),
+  Register: require("./Register"),
+};

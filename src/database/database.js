@@ -1,21 +1,27 @@
-require("dotenv").config();
-const {  DB_HOST, POSTGRESQL_URL } = process.env;
 const { Sequelize } = require("sequelize");
-const pg = require("pg");
+const { applyExtraSetup } = require('./extra-setup');
 
-const sequelize = new Sequelize(`${POSTGRESQL_URL}`, {
-  dialectModule: pg,
-  host: `${DB_HOST}`,
-  dialectOptions: {
-    ssl: true,
-  },
-  logging: false,
+// Importa los modelos
+const RegisterModel = require('../models/Register');
+const LoginModel = require('../models/Login');
+
+// Crear instancia de Sequelize
+const sequelize = new Sequelize(process.env.POSTGRESQL_URL, {
+  host: process.env.DB_HOST,
+  dialect: 'postgres',
+  logging: true,
 });
 
-const { Users, Purchases } = sequelize.models;
+// Define los modelos
+const Register = RegisterModel(sequelize, Sequelize);
+const Login = LoginModel(sequelize, Sequelize);
 
+// Aplica configuraciones adicionales, si las hay
+// applyExtraSetup(sequelize);
+
+// Exporta los modelos y la instancia de Sequelize
 module.exports = {
-  conn: sequelize,
-  Users,
-  Purchases,
+  Register,
+  Login,
+  sequelize,
 };
