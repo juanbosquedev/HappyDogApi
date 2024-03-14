@@ -1,12 +1,12 @@
 require("dotenv").config();
 const server = require("./src/server");
-const { sequelize } = require("./src/database/database");
+const { sequelize, Register, Login } = require("./src/database/database");
 const { PORT } = process.env;
 
 
 async function main() {
   try {
-    await sequelize.sync();
+    await sequelize.sync({force:true});
     console.log("Login, conection has been established successfully.") ;
     server.listen(PORT);
     console.log("Server lingening");

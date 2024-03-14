@@ -1,24 +1,24 @@
 const { Sequelize } = require("sequelize");
 const { applyExtraSetup } = require('./extra-setup');
 
-// Importa los modelos
-const RegisterModel = require('../models/Register');
-const LoginModel = require('../models/Login');
 
-// Crear instancia de Sequelize
 const sequelize = new Sequelize(process.env.POSTGRESQL_URL, {
   host: process.env.DB_HOST,
   dialect: 'postgres',
-  logging: true,
+  logging: false,
 });
 
-// Define los modelos
+const RegisterModel = require('../models/Register');
+const LoginModel = require('../models/Login');
+
 const Register = RegisterModel(sequelize, Sequelize);
 const Login = LoginModel(sequelize, Sequelize);
 
-// Aplica configuraciones adicionales, si las hay
-// applyExtraSetup(sequelize);
+  
+// const { register, login } = sequelize.models;
 
+// register.belongsToMany(login);
+// login.belongsTo(register);
 // Exporta los modelos y la instancia de Sequelize
 module.exports = {
   Register,
