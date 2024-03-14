@@ -21,7 +21,6 @@ module.exports = async (req, res) => {
 
     return res.status(201).json(true);
   } catch (error) {
-    console.error("Error al crear el usuario:", error);
     return res.status(500).json({ error: "Error interno del servidor" });
   }
 };
