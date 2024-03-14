@@ -1,8 +1,7 @@
 
 
-function applyExtraSetup() {
-    // const login = require("../models/login.model");
-    // const register = require("../models/register.model");
+function applyExtraSetup(sequelize) {
+
   
   
 	const { register, login } = sequelize.models;

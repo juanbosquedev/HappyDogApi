@@ -1,5 +1,4 @@
-
-
+const { Register } = require(".");
 
 module.exports = (sequelize, DataTypes) => {
   const Register = sequelize.define(
@@ -24,6 +23,11 @@ module.exports = (sequelize, DataTypes) => {
       password: {
         type: DataTypes.STRING,
         allowNull: false,
+      },
+
+      logged: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
       },
     },
     {

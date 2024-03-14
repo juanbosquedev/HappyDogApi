@@ -7,10 +7,10 @@ module.exports = async (req, res) => {
 
     if (userFromDB) {
     
-      await userFromDB.update({ logged: true });
-      return res.status(200).send(userFromDB);
+      await userFromDB.update({ logged: false });
+      return res.status(200).send(false);
     } else {
-      return res.status(401).send("Credenciales inválidas. Inténtalo de nuevo.");
+      return res.status(401).send("Algo salió mal");
     }
   } catch (error) {
     console.error(error);

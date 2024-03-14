@@ -19,6 +19,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      logged: {
+        type: DataTypes.BOOLEAN,
+    
+      }
     },
     {
       timestamps: false,
