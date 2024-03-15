@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const Dog = sequelize.define(
-    "Dog",
+  const Dogs = sequelize.define(
+    "Dogs",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -16,12 +16,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-
       height: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-
       weight: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -42,5 +40,5 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
-  return Dog;
+  return Dogs;
 };

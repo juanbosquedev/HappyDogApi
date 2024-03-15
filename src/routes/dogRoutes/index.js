@@ -3,9 +3,9 @@ const { userLogin, userRegister, userLogout } = require("../../controllers/dogCo
 
 const router = Router();
 
-router.post("/userLogin", userLogin);
+router.post("/newDog", userLogin);
 router.get("/dogsAll", userLogout);
 
-router.post("/userRegister", userRegister);
+
 
 module.exports = router;
