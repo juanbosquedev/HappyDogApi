@@ -3,16 +3,16 @@ const {
   userLogin,
   userRegister,
   userLogout,
-  allDogs,
+  alldogs,
 } = require("../controllers");
 
 const router = Router();
 //users
 router.post("/userLogin", userLogin);
-router.post("/userLogout", userLogout);//va con un update
+router.get("/userLogout", userLogout);
 router.post("/userRegister", userRegister);
 
 //dogs
-router.get("/allDogs", allDogs);
+router.get("/alldogs", alldogs);
 
 module.exports = router;
