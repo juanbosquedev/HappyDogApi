@@ -1,4 +1,4 @@
-const { Register } = require(".");
+const { Register } = require("..");
 
 module.exports = (sequelize, DataTypes) => {
   const Register = sequelize.define(

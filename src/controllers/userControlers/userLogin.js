@@ -1,9 +1,9 @@
-const { Register } = require("../../database/database");
+const { Registers } = require("../../database/database");
 
 module.exports = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const userFromDB = await Register.findOne({ where: { email, password } });
+    const userFromDB = await Registers.findOne({ where: { email, password } });
     if (!userFromDB) {
       return res
         .status(400)

@@ -1,4 +1,4 @@
-const { Register } = require("../../database/database");
+const { Registers } = require("../../database/database");
 
 module.exports = async (req, res) => {
   const { name, email, password, passwordValidate } = req.body;
@@ -12,14 +12,15 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const newUser = await Register.create({
+    const newUser = await Registers.create({
       name,
       email,
       password,
       logged: false, 
     });
+    
+    return newUser && res.status(201).json(true);
 
-    return res.status(201).json(true);
   } catch (error) {
     return res.status(500).json({ error: "Error interno del servidor" });
   }
