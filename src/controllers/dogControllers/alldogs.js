@@ -1,27 +1,39 @@
 const { getData } = require("./getDogData/getDogData");
-
-const { Register } = require("../../database/database");
+const { Dogs, Registers } = require('../../database/database'); 
 
 module.exports = async (req, res) => {
   try {
-    const dogsData = await getData();
-    const dogsWithUserDetails = await Promise.all(
-      dogsData.map(async (dog) => {
-        const user = await Register.findOne({ where: { id: dog.hostage_id } });
+    // Obtener los perros de la base de datos
+    const dogsFromDB = await Dogs.findAll();
 
-        if (user) {
-          return {
-            ...dog,
-            user: {
-              name: user.name,
-              email: user.email,
-            },
-          };
-        } else {
-          return dog;
+    // Obtener los perros de la función getData()
+    const dogsFromAPI = await getData();
+
+    // Combinar los perros de la base de datos y los obtenidos de la función getData()
+    const allDogs = [...dogsFromDB, ...dogsFromAPI];
+
+    // Para cada perro, obtener los detalles del usuario si está disponible
+    const dogsWithUserDetails = await Promise.all(
+      allDogs.map(async (dog) => {
+        if (dog.hostage_id) {
+          // Buscar el usuario en la base de datos
+          const user = await Registers.findOne({ where: { id: dog.hostage_id } });
+
+          if (user) {
+            return {
+              ...dog,
+              user: {
+                name: user.name,
+                email: user.email,
+              },
+            };
+          }
         }
+        
+        return dog; // Si no se encuentra el usuario, retornar el perro sin detalles de usuario
       })
     );
+
     return res.status(200).json(dogsWithUserDetails);
   } catch (error) {
     console.error("Error interno del servidor:", error);
