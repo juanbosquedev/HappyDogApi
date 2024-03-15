@@ -1,4 +1,4 @@
 module.exports = {
   Login: require("./Login"),
-  egister: require("./Register"),
+  register: require("./Register"),
 };
