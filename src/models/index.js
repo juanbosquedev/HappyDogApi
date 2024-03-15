@@ -1,4 +1,5 @@
 module.exports = {
-  Login: require("./Login"),
-  register: require("./Register"),
+  Login: require("./users/Login"),
+  Register: require("./users/Register"),
+  DogsRecord: require("./dogs/DogsRecord")
 };
