@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
     if (!name && !height && !weight && !image && !personality && !life_span) {
       return res
         .status(400)
-        .json({ error: "At least one field to update is required" });
+        .json({ error: "Se requiere al menos algún campo actualizado" });
     }
 
   
@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
 
    
     if (!dog) {
-      return res.status(404).json({ error: "Dog not found" });
+      return res.status(408).json({ error: "Perro no encontrado" });
     }
 
     if (name) dog.name = name;
@@ -32,6 +32,6 @@ module.exports = async (req, res) => {
 
     res.status(200).json({ success: true, dog });
   } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Error interno del servidor" });
   }
 };
