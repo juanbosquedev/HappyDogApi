@@ -5,7 +5,6 @@ let sequelize = new Sequelize(process.env.POSTGRESQL_URL, {
   host: process.env.DB_HOST,
   dialect: "postgres",
   logging: true,
-  
 });
 
 const {Login} = require("../models");
