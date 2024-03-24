@@ -2,6 +2,7 @@
   {
     "id": "Bymjyec4m",
     "url": "https://cdn2.thedogapi.com/images/Bymjyec4m_1280.jpg",
+    "city":"Bogota",
     "height": 48,
     "weight": 18,
     "temperament": "Leal, Juguetón, Inteligente",
@@ -11,6 +12,7 @@
   {
     "id": "ryHJZlcNX",
     "url": "https://cdn2.thedogapi.com/images/ryHJZlcNX_1280.jpg",
+    "city":"Córdoba",
     "height": 42,
     "weight": 15,
     "temperament": "Amigable, Activo, Alerta",
@@ -20,6 +22,7 @@
   {
     "id": "SJp7Qe5EX",
     "url": "https://cdn2.thedogapi.com/images/SJp7Qe5EX_1280.jpg",
+    "city":"Cali",
     "height": 30,
     "weight": 10,
     "temperament": "Cariñoso, Curioso, Valiente",
@@ -29,6 +32,7 @@
   {
     "id": "H1zSie9V7",
     "url": "https://cdn2.thedogapi.com/images/H1zSie9V7_1280.jpg",
+    "city":"Medellin",
     "height": 40,
     "weight": 16,
     "temperament": "Amigable, Protector, Juguetón",
@@ -38,6 +42,7 @@
   {
     "id": "ena5znPUB",
     "url": "https://cdn2.thedogapi.com/images/ena5znPUB.jpg",
+    "city":"Antioquia",
     "height": 50,
     "weight": 22,
     "temperament": "Cariñoso, Energetico, Leal",
@@ -47,6 +52,7 @@
   {
     "id": "t558lhehG",
     "url": "https://cdn2.thedogapi.com/images/t558lhehG.jpg",
+    "city":"Bucamaranga",
     "height": 45,
     "weight": 12,
     "temperament": "Divertido, Valiente, Independiente",
@@ -56,6 +62,7 @@
   {
     "id": "hS_-gIE3G",
     "url": "https://cdn2.thedogapi.com/images/hS_-gIE3G.jpg",
+    "city":"Cucuta",
     "height": 48,
     "weight": 14,
     "temperament": "Amigable, Juguetón, Inteligente",
@@ -65,6 +72,7 @@
   {
     "id": "KozrdsGZv",
     "url": "https://cdn2.thedogapi.com/images/KozrdsGZv.jpg",
+    "city":"Tunja",
     "height": 66,
     "weight": 140,
     "temperament": "Gentil, Protector, Amigable",
@@ -74,6 +82,7 @@
   {
     "id": "wJjvV6A5T",
     "url": "https://cdn2.thedogapi.com/images/wJjvV6A5T.jpg",
+    "city":"Paipa",
     "height": 45,
     "weight": 20,
     "temperament": "Audaz, Leal, Cariñoso",
@@ -83,6 +92,7 @@
   {
     "id": "SGHnWcS9S",
     "url": "https://cdn2.thedogapi.com/images/SGHnWcS9S.jpg",
+    "city":"Bogota",
     "height": 38,
     "weight": 15,
     "temperament": "Curioso, Alegre, Intrépido",
@@ -92,6 +102,7 @@
   {
     "id": "UyN27ZccR",
     "url": "https://cdn2.thedogapi.com/images/UyN27ZccR.jpg",
+    "city":"Córdoba",
     "height": 60,
     "weight": 25,
     "temperament": "Juguetón, Sociable, Amigable",
@@ -101,6 +112,7 @@
   {
     "id": "uMmHj_fAU",
     "url": "https://cdn2.thedogapi.com/images/uMmHj_fAU.jpg",
+    "city":"Cali",
     "height": 35,
     "weight": 18,
     "temperament": "Energético, Leal, Juguetón",
@@ -110,6 +122,7 @@
   {
     "id": "AsoN97fL0",
     "url": "https://cdn2.thedogapi.com/images/AsoN97fL0.jpg",
+    "city":"Medellin",
     "height": 30,
     "weight": 12,
     "temperament": "Cariñoso, Alerta, Alegre",
@@ -119,6 +132,7 @@
   {
     "id": "R0aPfRQpz",
     "url": "https://cdn2.thedogapi.com/images/R0aPfRQpz.jpg",
+    "city":"Paipa",
     "height": 70,
     "weight": 160,
     "temperament": "Amigable, Gentil, Cariñoso",
@@ -128,6 +142,7 @@
   {
     "id": "4clvqdOcW",
     "url": "https://cdn2.thedogapi.com/images/4clvqdOcW.jpg",
+    "city":"Antioquia",
     "height": 80,
     "weight": 200,
     "temperament": "Leal, Valiente, Protector",
@@ -137,6 +152,7 @@
   {
     "id": "W_nKKqjVR",
     "url": "https://cdn2.thedogapi.com/images/W_nKKqjVR.jpg",
+    "city":"Cucuta",
     "height": 25,
     "weight": 10,
     "temperament": "Amigable, Juguetón, Curioso",
@@ -146,6 +162,7 @@
   {
     "id": "Bymjyec4m",
     "url": "https://cdn2.thedogapi.com/images/Bymjyec4m_1280.jpg",
+    "city":"Bogota",
     "height": 48,
     "weight": 18,
     "temperament": "Inteligente, Leal, Divertido",
@@ -155,6 +172,7 @@
   {
     "id": "HkD1LppV7",
     "url": "https://cdn2.thedogapi.com/images/HkD1LppV7.gif",
+    "city":"Paipa",
     "height": 30,
     "weight": 8,
     "temperament": "Cariñoso, Jovial, Aventurero",
@@ -164,6 +182,7 @@
   {
     "id": "wd68jwRjD",
     "url": "https://cdn2.thedogapi.com/images/wd68jwRjD.png",
+    "city":"Bogota",
     "height": 20,
     "weight": 6,
     "temperament": "Inquisitivo, Amistoso, Enérgico",
@@ -173,6 +192,7 @@
   {
     "id": "Bymjyec4m",
     "url": "https://cdn2.thedogapi.com/images/Bymjyec4m_1280.jpg",
+    "city":"Medellin",
     "height": 48,
     "weight": 18,
     "temperament": "Leal, Juguetón, Inteligente",
@@ -182,6 +202,7 @@
   {
     "id": "ryHJZlcNX",
     "url": "https://cdn2.thedogapi.com/images/ryHJZlcNX_1280.jpg",
+    "city":"Bogota",
     "height": 42,
     "weight": 15,
     "temperament": "Amigable, Activo, Alerta",
@@ -191,6 +212,7 @@
   {
     "id": "SJp7Qe5EX",
     "url": "https://cdn2.thedogapi.com/images/SJp7Qe5EX_1280.jpg",
+    "city":"Cali",
     "height": 30,
     "weight": 10,
     "temperament": "Cariñoso, Curioso, Valiente",
