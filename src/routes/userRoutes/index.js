@@ -3,8 +3,9 @@ const {
   userLogin,
   userRegister,
   userLogout,
-  alldogs,
+  
 } = require("../controllers");
+const { alldogs, dogDelete, dogUpdate, newDog } = require("../../controllers");
 
 const router = Router();
 //users
@@ -14,5 +15,9 @@ router.post("/userRegister", userRegister);
 
 //dogs
 router.get("/alldogs", alldogs);
+router.delete("/deletedog", dogDelete);
+router.put("/updatedog", dogUpdate);
+router.post("/newdog", newDog)
+
 
 module.exports = router;
