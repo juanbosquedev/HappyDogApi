@@ -10,10 +10,10 @@ module.exports = async (req, res) => {
       await userFromDB.update({ logged: false });
       return res.status(200).send(false);
     } else {
-      return res.status(401).send("Algo salió mal");
+      return res.status(401).json({error:"Algo salió mal"});
     }
   } catch (error) {
     console.error(error);
-    res.status(500).send("Error interno del servidor");
+    res.status(500).json({error:"Error interno del servidor"});
   }
 };
