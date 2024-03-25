@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
      dataValues: { ...newDogd},
       user: user
         ? { name: user.name, email: user.email } 
-        : null // Si no se encuentra el usuario, se asigna null
+        : null 
     };
 
     // Devolver el nuevo perro con la información del usuario en la respuesta
