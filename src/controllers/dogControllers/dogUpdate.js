@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
     await dog.save();
 
 
-    res.status(200).json({ success: true, dog });
+    res.status(200).json( dog );
   } catch (error) {
     res.status(500).json({ error: "Error interno del servidor" });
   }
