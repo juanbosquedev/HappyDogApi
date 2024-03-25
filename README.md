@@ -10,6 +10,10 @@ Happy Dog es una aplicación de escritorio diseñada para ayudar a las personas 
 
 -El frontend de Happy Dog está desplegado en la siguiente dirección: [Happy Dog Frontend](https://happy-dog-front.vercel.app/)
 
+## Video descriptivo
+
+En el siguiente link se muestra en un video las funcionalidades: [demostración de funcionamiento](https://www.youtube.com/watch?v=LJfkwNTY9RU)
+
 ## Instrucciones de Inicio
 
 ### 1. Clonar el Repositorio
