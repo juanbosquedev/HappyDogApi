@@ -1,15 +1,25 @@
-const { getData } = require("./getDogData/getDogData");
 const { Dogs, Registers } = require("../../database/database");
+const { getData } = require("./getDogData/getDogData");
 
 module.exports = async (req, res) => {
   try {
-    const isEmpty = await Dogs.count() === 0;
+    const isEmpty = (await Dogs.count()) === 0;
 
     let dogsFromDB;
     if (isEmpty) {
       const dogsFromAPI = await getData();
-      await Dogs.bulkCreate(dogsFromAPI);
-      dogsFromDB = dogsFromAPI;
+      dogsFromDB = await Dogs.bulkCreate(dogsFromAPI);
+
+      const userCount = await Registers.count();
+      if (userCount === 0) {
+        // default first user
+        await Registers.create({
+          name: "Juan",
+          email: "juan@hotmail.com",
+          password: "123",
+          passwordValidate: "123",
+        });
+      }
     } else {
       dogsFromDB = await Dogs.findAll();
     }

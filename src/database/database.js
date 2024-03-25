@@ -7,23 +7,23 @@ let sequelize = new Sequelize(process.env.POSTGRESQL_URL, {
   logging: true,
 });
 
-const {Login} = require("../models");
+// const {Login} = require("../models");
 const {Register} = require("../models");
 const {DogsRecord }= require("../models");
 
-const Logins = Login(sequelize, Sequelize);
+// const Logins = Login(sequelize, Sequelize);
 const Registers = Register(sequelize, Sequelize);
 const Dogs = DogsRecord(sequelize, Sequelize);
 
 
 
 // const { Registers, Logins, Dogs } = sequelize.models;
-// register.belongsToMany(login);
-// login.belongsTo(register);
+// Register.belongsToMany(Dogs);
+// ogin.belongsTo(register);
 // Exporta los modelos y la instancia de Sequelize
 module.exports = {
   Registers,
-  Logins,
+  // Logins,
   Dogs,
   sequelize,
 };
