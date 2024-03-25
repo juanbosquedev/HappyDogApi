@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
       return res.status(400).json({ error: 'Todos los campos son obligatorios' });
     }
 
- 
+    // Crear el nuevo perro en la base de datos
     const newDog = await Dogs.create({
       hostage_id,
       name,
@@ -23,12 +23,13 @@ module.exports = async (req, res) => {
     const user = await Registers.findOne({ where: { id: hostage_id } });
 
     const dogWithUser = {
-     ataValues: { ...newDogd},
+     dataValues: { ...newDogd},
       user: user
         ? { name: user.name, email: user.email } 
-        : null 
+        : null // Si no se encuentra el usuario, se asigna null
     };
 
+    // Devolver el nuevo perro con la información del usuario en la respuesta
     res.status(201).json(dogWithUser);
   } catch (error) {
     console.error('Error creating dog:', error);
