@@ -4,15 +4,15 @@ const { sequelize, Register, Dog } = require("./src/database/database");
 const { PORT } = process.env;
 
 
-async function main() {
+(async function main() {
   try {
     await sequelize.sync({force:false});
     console.log("Login, conection has been established successfully.") ;
     server.listen(PORT);
-    console.log("Server lingening");
+    console.log(`Server lingening on: ${PORT}`);
   } catch (error) {
-    console.error("Unable to connect to the database:", error);
+    console.error(`Unable to connect to the database: ${error}`);
   }
-}
+})()
 
-main();
+

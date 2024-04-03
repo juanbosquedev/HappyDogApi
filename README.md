@@ -96,6 +96,7 @@ npm start
 - Express
 - Sequelize
 - PostgreSql
+- JWT
 
 
 ---
