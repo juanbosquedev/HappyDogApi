@@ -1,22 +1,25 @@
 const jwt = require("jsonwebtoken");
 
 module.exports = (req, res, next) => {
-  const token = req.header("authorization");
-console.log(token, " soy token backHDHDHDHDH")
+  
+  const token = req.header("Authorization");
+
   if (!token) {
-    return res
-      .status(401)
-      .json({ message: "No se proporcionó un token de autenticación" });
+    return res.status(401).json({ message: "Token not provided" });
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    
+    const extractedToken = token.startsWith("Bearer ") ? token.slice(7, token.length).trim() : token;
+
+    const decoded = jwt.verify(extractedToken, process.env.JWT_SECRET);
 
     req.user = decoded;
 
     next();
   } catch (error) {
-    console.error(error);
-    return res.status(401).json({ message: "Token de autenticación inválido" });
+    console.error("JWT verification error:", error);
+
+    return res.status(401).json({ message: "Invalid token" });
   }
 };
