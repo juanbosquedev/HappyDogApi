@@ -13,7 +13,8 @@ const authenticate = require("../middleware/authenticate");
 const router = Router();
 
 // user
-router.post("/userLogin", userLogin);
+// router.post("/userLogin", userLogin);
+router.get("/userLogin", userLogin);
 router.post("/userLogout", userLogout);
 router.post("/userRegister", userRegister);
 
