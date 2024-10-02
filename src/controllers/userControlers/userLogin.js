@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
     const { email, password } = req.body;
     // const userFromDB = await Registers.findOne({ where: { email, password } });
 const userFromDB = await Registers.findAll();
-    return res.status(200).json( userFromDB);
+    return res.status(200).json(userFromDB);
     // if (!userFromDB) {
     //   return res
     //     .status(400)
