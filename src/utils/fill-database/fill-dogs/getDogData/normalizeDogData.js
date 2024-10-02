@@ -1,5 +1,5 @@
 const fs = require("fs");
-const jsonData = fs.readFileSync("dog.json", "utf8");//json:dogs more information
+const jsonData = fs.readFileSync("dog.json", "utf8");//json:dogs extra(data exteranl API) information
 
 const parsingDogs = JSON.parse(jsonData);
 
@@ -11,8 +11,10 @@ const normalize = function (obj, index) {
   let name =parsingDogs[index]?.name;
   let city = parsingDogs[index]?.city;
   let temperament =parsingDogs[index]?.temperament;
+
   return {
-    hostage_id: 1,
+
+    hostage_id: 1, // DEFAULT ID FOR THE FIRST USER CREATED
     name: name,
     city:city,
     height: obj.height + " centímetros",
