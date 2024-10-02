@@ -1,11 +1,12 @@
 const { Router } = require("express");
-const { userLogin, userRegister, userLogout } = require("../../controllers/dogControllers");
-
 const router = Router();
 
-router.post("/newDog", userLogin);
-router.get("/dogsAll", userLogout);
+const { dogsController } = require("../../controllers/index");
+const { newDog, dogDelete, dogUpdate, allDogs } = dogsController;
 
-
+router.get("/", allDogs);
+router.put("/:id", dogUpdate);
+router.post("/", newDog);
+router.delete("/:id", dogDelete);
 
 module.exports = router;
