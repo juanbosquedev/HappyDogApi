@@ -1,10 +1,11 @@
-const { Registers } = require("../../database/database");
+const { User } = require("../../../models/index.js");
+
 const jwt = require("jsonwebtoken");
 
 module.exports = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const userFromDB = await Registers.findOne({ where: { email, password } });
+    const userFromDB = await User.findOne({ where: { email, password } });
 
     if (!userFromDB) {
       return res
@@ -16,9 +17,9 @@ module.exports = async (req, res) => {
       expiresIn: "60m",
     });
 
-    await userFromDB.update({ logged: true });
+    const userResponse = { ...userFromDB.toJSON(), logged: true };
 
-    return res.status(200).json({ userFromDB, token });
+    return res.status(200).json({ user: userResponse, token });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error interno del servidor" });
