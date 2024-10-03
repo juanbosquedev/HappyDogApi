@@ -14,7 +14,10 @@ module.exports = async (req, res) => {
       return res.status(404).json({ error: "Dog not found" }); 
     }
 
-    const deletedCount = await DogsRecord.destroy();
+    // Deleting the dog by ID
+    const deletedCount = await DogsRecord.destroy({
+      where: { id }
+    });
 
     if (deletedCount === 0) {
       return res.status(500).json({ error: "Failed to delete dog" });
